@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Frostify</string>
+
+    <string name="widget_clock_label">Frostify Clock</string>
+    <string name="widget_calendar_label">Frostify Calendar</string>
+    <string name="widget_notes_label">Frostify Notes</string>
+    <string name="widget_weather_label">Frostify Weather</string>
+    <string name="widget_battery_label">Frostify Battery</string>
+    <string name="widget_music_label">Frostify Music</string>
+    <string name="widget_photo_label">Frostify Photo</string>
+    <string name="widget_calculator_label">Frostify Calculator</string>
+    <string name="widget_habit_label">Frostify Habit</string>
+    <string name="widget_quote_label">Frostify Quote</string>
+    <string name="widget_toggle_label">Frostify Flashlight</string>
+</resources>

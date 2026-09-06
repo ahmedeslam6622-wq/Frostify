@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Frostify"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Frostify">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".NoteEditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Frostify"
+            android:label="@string/widget_notes_label" />
+
+        <activity
+            android:name=".PhotoPickActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Frostify.Transparent" />
+
+        <!-- Clock widget -->
+        <receiver
+            android:name=".ClockWidget"
+            android:exported="false"
+            android:label="@string/widget_clock_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/clock_widget_info" />
+        </receiver>
+
+        <!-- Calendar widget -->
+        <receiver
+            android:name=".CalendarWidget"
+            android:exported="false"
+            android:label="@string/widget_calendar_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calendar_widget_info" />
+        </receiver>
+
+        <!-- Notes widget -->
+        <receiver
+            android:name=".NotesWidget"
+            android:exported="false"
+            android:label="@string/widget_notes_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/notes_widget_info" />
+        </receiver>
+
+        <!-- Weather widget -->
+        <receiver
+            android:name=".WeatherWidget"
+            android:exported="false"
+            android:label="@string/widget_weather_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_widget_info" />
+        </receiver>
+
+        <!-- Battery widget -->
+        <receiver
+            android:name=".BatteryWidget"
+            android:exported="false"
+            android:label="@string/widget_battery_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/battery_widget_info" />
+        </receiver>
+
+        <!-- Music widget -->
+        <receiver
+            android:name=".MusicWidget"
+            android:exported="false"
+            android:label="@string/widget_music_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/music_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".MediaControlReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.frostify.widgets.ACTION_MEDIA_CONTROL" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Photo widget -->
+        <receiver
+            android:name=".PhotoWidget"
+            android:exported="false"
+            android:label="@string/widget_photo_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/photo_widget_info" />
+        </receiver>
+
+        <!-- Calculator widget -->
+        <receiver
+            android:name=".CalculatorWidget"
+            android:exported="false"
+            android:label="@string/widget_calculator_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calculator_widget_info" />
+        </receiver>
+
+        <!-- Habit tracker widget -->
+        <receiver
+            android:name=".HabitWidget"
+            android:exported="false"
+            android:label="@string/widget_habit_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/habit_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".HabitCheckInReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.frostify.widgets.ACTION_HABIT_CHECK_IN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Quote widget -->
+        <receiver
+            android:name=".QuoteWidget"
+            android:exported="false"
+            android:label="@string/widget_quote_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/quote_widget_info" />
+        </receiver>
+
+        <!-- Flashlight toggle widget -->
+        <receiver
+            android:name=".ToggleWidget"
+            android:exported="false"
+            android:label="@string/widget_toggle_label">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/toggle_widget_info" />
+        </receiver>
+
+        <receiver
+            android:name=".FlashlightToggleReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.frostify.widgets.ACTION_TOGGLE_FLASHLIGHT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Frostify" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorBackground">#0F1115</item>
+        <item name="android:statusBarColor">#0F1115</item>
+    </style>
+
+    <style name="Theme.Frostify.Transparent" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
